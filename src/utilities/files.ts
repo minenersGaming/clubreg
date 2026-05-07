@@ -10,11 +10,11 @@ export const convertToStaticFileUriC = (isStatic, old: string) => {
   if (!isStatic) {
     return old
   }
-  //static-clubreg.tucm.cc doesn't seems to work at the moment
+  //static-clubreg.tucm.cc doesn't seems to work for newly uploaded files at the moment
   //return old.replace("storage.googleapis.com", "static-clubreg.tucm.cc").replace("/assets", "https://static-clubreg.tucm.cc/assets")
   return old
     .replace("storage.googleapis.com", "storage.googleapis.com")
-    .replace("/assets", "https://storage.googleapis.com/assets")
+    .replace("/assets", "https://static-clubreg.tucm.cc/assets")
 }
 
 export const convertToStaticFileUri = (old: string) => {
